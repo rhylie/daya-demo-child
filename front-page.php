@@ -17,10 +17,7 @@ get_header();
 
 	<!-- Banner -->
 	<section id="banner">
-		
-		<h2>Alpha</h2>
-		<p>Hello world this is my custom theme.</p>
-
+		<?php the_field('main_heading'); ?>
 	</section><!-- /.ends #banner -->
 
 	<!-- Main -->

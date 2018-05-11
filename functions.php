@@ -1,6 +1,10 @@
 <?php
 
 	if ( !function_exists() ) {
+
+
+
+
 		// Display 1 post from certain category.
 		function display_home_intro_content() {
 			//$catquery = new WP_Query( 'cat=32&posts_per_page=3' );
@@ -74,12 +78,14 @@
 			);
 			if ( $catquery->have_posts() ) {
 				// The loop
+				echo '<div class="row">';
 				while ( $catquery->have_posts() ) :
 					$catquery->the_post();
 					?>
-					<?php get_template_part( 'template-parts/content-home-featured' ); ?> 
+					<?php get_template_part( 'template-parts/content-home-featured' ); ?>
 				<?php
 				endwhile;
+				echo '</div>';
 			}
 			else {
 				// Nothing found..
@@ -92,6 +98,16 @@
 
 	}// Ends !function_exists()
 
+
+	function myplugin_filter_row_attributes($attributes, $grid){
+
+		if ( !empty ($attributes) ) {
+			$attributes = array('panel-grid panel-no-style features-row');
+		}
+
+	    return $attributes;
+	}
+	add_filter('siteorigin_panels_row_classes','myplugin_filter_row_attributes', 10, 2);
 
 
 ?>

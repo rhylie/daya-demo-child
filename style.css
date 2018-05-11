@@ -1,0 +1,11 @@
+/*
+Theme Name:     Daya Demo Child
+Theme URI:      http://underscores.me/
+Description:    Child theme for the Daya Demo
+Author:         N/A
+Author URI:     N/A
+Template:       daya-demo
+Version:        1.0.0
+*/
+
+@import url("../daya-demo/style.css");

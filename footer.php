@@ -11,21 +11,21 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'daya-demo' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'daya-demo' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'daya-demo' ), 'daya-demo', '<a href="http://N/A">John Doe</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<!-- Footer -->
+	<footer id="footer">
+		<ul class="icons">
+			<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+			<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+			<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+		</ul>
+		<ul class="copyright">
+			<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</footer>
+
 </div><!-- #page-wrapper -->
 
 <?php wp_footer(); ?>

@@ -23,21 +23,18 @@ get_header();
 	<!-- Main -->
 	<section id="main" class="container">
 
-		<?php 
-			// Display featured intro post
-			display_home_intro_content(); ?>
+		<?php display_home_intro_content(); ?><!-- Display featured intro post -->
 
 			<?php 
-				if( have_posts() ) :
+				if( have_posts() ) : ?>
+					<?php
 					if ( is_front_page() && ! is_home() ) :
 						while ( have_posts() ) :
 							the_post();
 							the_content();
 						endwhile;
-					else :
-						// display content for home.php
-					endif;
-				?>
+					endif; 
+					?>
 			<?php endif; ?>
 
 		<?php display_home_featured_posts(); ?>
